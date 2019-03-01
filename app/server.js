@@ -3,13 +3,16 @@
 // The example below uses values for play.minio.io:9000
 
 const Minio = require('minio')
+var creds = require('./creds')
 
 var client = new Minio.Client({
     endPoint: 'minio1',
     port: 9000,
     useSSL: false,
-    accessKey: 'accesskey',
-    secretKey: 'Secretkey'
+    accessKey: creds.accessKey,
+    secretKey: creds.secretKey
+//    accessKey: creds.accessKey(),
+//    secretKey: creds.secretKey()
 })
 
 // Instantiate an `express` server and expose an endpoint called `/presignedUrl` as a `GET` request that
