@@ -3,7 +3,7 @@
 // The example below uses values for play.minio.io:9000
 
 const Minio = require('minio')
-var creds = require('./creds')
+var creds = require('./creds/creds.js')
 
 var client = new Minio.Client({
     endPoint: 'minio1',
