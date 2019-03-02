@@ -31,7 +31,9 @@ server.get('/presignedUrl', (req, res) => {
 })
 
 server.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    //res.sendFile(__dirname + '/index.html');
+    res.sendFile('http://minio1:9000/miniofe/index.html');
 })
 
 server.listen(8088)
+console.log('Server running on 8088...')
