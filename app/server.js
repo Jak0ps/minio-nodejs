@@ -34,14 +34,8 @@ server.get('/statusCheck', (req, res) => {
     res.sendStatus(200);
 })
 
-//server.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/index.html');
-//})
-
 server.get('/', (req, res) => {
-    res.statusCode = 200;
-    res.setHeader("Location", "http://minio1:9000/miniofe/index.html");
-    res.end();
+   res.sendFile(__dirname + '/index.html');
 })
 
 server.listen(8088)
